@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6C0DA6D3-7071-4EF2-B788-341608316A9F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\..\CppCgi\src\Cgi;$(IncludePath)</IncludePath>
+    <ReferencePath>
+    </ReferencePath>
+    <LibraryPath>..\..\..\CppCgi\src\$(IntDir)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\..\CppCgi\src\Cgi;$(IncludePath)</IncludePath>
+    <ReferencePath>
+    </ReferencePath>
+    <LibraryPath>..\..\..\CppCgi\src\$(IntDir)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;IGCGI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../CppCgi/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>cppcgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;IGCGI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../CppCgi/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>cppcgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Composant.cpp" />
+    <ClCompile Include="ComposantPrincipal.cpp" />
+    <ClCompile Include="composants\Balise.cpp" />
+    <ClCompile Include="composants\BaliseFormulaire.cpp" />
+    <ClCompile Include="composants\Bouton.cpp" />
+    <ClCompile Include="composants\BoutonImage.cpp" />
+    <ClCompile Include="composants\BoutonRadio.cpp" />
+    <ClCompile Include="composants\CaseCocher.cpp" />
+    <ClCompile Include="composants\Champ.cpp" />
+    <ClCompile Include="composants\ChampInvisible.cpp" />
+    <ClCompile Include="composants\ChampTexte.cpp" />
+    <ClCompile Include="composants\Etiquette.cpp" />
+    <ClCompile Include="composants\Formulaire.cpp" />
+    <ClCompile Include="composants\Fusion.cpp" />
+    <ClCompile Include="composants\Lien.cpp" />
+    <ClCompile Include="composants\Liste.cpp" />
+    <ClCompile Include="composants\ListeDeroulante.cpp" />
+    <ClCompile Include="composants\Panneau.cpp" />
+    <ClCompile Include="composants\Paragraphe.cpp" />
+    <ClCompile Include="composants\Titre.cpp" />
+    <ClCompile Include="composants\ZoneTexte.cpp" />
+    <ClCompile Include="DeserialiseurFOWS.cpp" />
+    <ClCompile Include="ElementListe.cpp" />
+    <ClCompile Include="Evenement.cpp" />
+    <ClCompile Include="GestionnaireScript.cpp" />
+    <ClCompile Include="Objet.cpp" />
+    <ClCompile Include="ObjetSync.cpp" />
+    <ClCompile Include="Page.cpp" />
+    <ClCompile Include="SerialiseurFOWS.cpp" />
+    <ClCompile Include="slotsig\slotsig_bases.cpp" />
+    <ClCompile Include="Synchroniseur.cpp" />
+    <ClCompile Include="tinyxml\ticpp.cpp" />
+    <ClCompile Include="tinyxml\tinyxml.cpp" />
+    <ClCompile Include="tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxml\tinyxmlparser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppIgCgi.h" />
+    <ClInclude Include="CollectionFiltreable.h" />
+    <ClInclude Include="Composant.h" />
+    <ClInclude Include="ComposantPrincipal.h" />
+    <ClInclude Include="composants\Balise.h" />
+    <ClInclude Include="composants\BaliseFormulaire.h" />
+    <ClInclude Include="composants\Bouton.h" />
+    <ClInclude Include="composants\BoutonImage.h" />
+    <ClInclude Include="composants\BoutonRadio.h" />
+    <ClInclude Include="composants\CaseCocher.h" />
+    <ClInclude Include="composants\Champ.h" />
+    <ClInclude Include="composants\ChampInvisible.h" />
+    <ClInclude Include="composants\ChampTexte.h" />
+    <ClInclude Include="composants\Etiquette.h" />
+    <ClInclude Include="composants\Formulaire.h" />
+    <ClInclude Include="composants\Fusion.h" />
+    <ClInclude Include="composants\Lien.h" />
+    <ClInclude Include="composants\Liste.h" />
+    <ClInclude Include="composants\ListeDeroulante.h" />
+    <ClInclude Include="composants\Panneau.h" />
+    <ClInclude Include="composants\Paragraphe.h" />
+    <ClInclude Include="composants\Titre.h" />
+    <ClInclude Include="composants\ZoneTexte.h" />
+    <ClInclude Include="Controle.h" />
+    <ClInclude Include="DeserialiseurFOWS.h" />
+    <ClInclude Include="ElementListe.h" />
+    <ClInclude Include="Evenement.h" />
+    <ClInclude Include="GestionnaireScript.h" />
+    <ClInclude Include="Objet.h" />
+    <ClInclude Include="ObjetSync.h" />
+    <ClInclude Include="ObjSyncInterne.h" />
+    <ClInclude Include="Page.h" />
+    <ClInclude Include="SerialiseurFOWS.h" />
+    <ClInclude Include="slotsig\slotsig_0.h" />
+    <ClInclude Include="slotsig\slotsig_1.h" />
+    <ClInclude Include="slotsig\slotsig_10.h" />
+    <ClInclude Include="slotsig\slotsig_11.h" />
+    <ClInclude Include="slotsig\slotsig_12.h" />
+    <ClInclude Include="slotsig\slotsig_13.h" />
+    <ClInclude Include="slotsig\slotsig_14.h" />
+    <ClInclude Include="slotsig\slotsig_15.h" />
+    <ClInclude Include="slotsig\slotsig_16.h" />
+    <ClInclude Include="slotsig\slotsig_2.h" />
+    <ClInclude Include="slotsig\slotsig_3.h" />
+    <ClInclude Include="slotsig\slotsig_4.h" />
+    <ClInclude Include="slotsig\slotsig_5.h" />
+    <ClInclude Include="slotsig\slotsig_6.h" />
+    <ClInclude Include="slotsig\slotsig_7.h" />
+    <ClInclude Include="slotsig\slotsig_8.h" />
+    <ClInclude Include="slotsig\slotsig_9.h" />
+    <ClInclude Include="slotsig\slotsig_bases.h" />
+    <ClInclude Include="slotsig\slotsig_policies.h" />
+    <ClInclude Include="slotsig\slotsig_storage_policies.h" />
+    <ClInclude Include="slotsig\slotsig_tools.h" />
+    <ClInclude Include="Synchroniseur.h" />
+    <ClInclude Include="tinyxml\ticpp.h" />
+    <ClInclude Include="tinyxml\ticpprc.h" />
+    <ClInclude Include="tinyxml\tinyxml.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
